@@ -10,7 +10,7 @@ function App() {
   }
 
   function handleSetBadgeCount() {
-    navigator.setAppBadge(10);
+    (navigator as any).setAppBadge(10);
   }
 
   return (
