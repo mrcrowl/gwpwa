@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "mode": "serde",
+  "title": "Individual wants a refund (GW reimbursed)",
+  "accounts": [
+    {
+      "id": "SXB",
+      "owner": "SpaceX",
+      "type": "Bank",
+      "openingBalance": 100
+    },
+    {
+      "id": "GWT",
+      "owner": "Givenwell",
+      "type": "Trust",
+      "openingBalance": 0
+    },
+    {
+      "id": "GWB",
+      "owner": "Givenwell",
+      "type": "Bank",
+      "openingBalance": 0
+    },
+    {
+      "id": "LMB",
+      "owner": "Les Mills",
+      "type": "Bank",
+      "openingBalance": 0
+    },
+    {
+      "id": "SXW",
+      "owner": "SpaceX",
+      "type": "Wallet",
+      "openingBalance": 0,
+      "spaceBefore": true
+    },
+    {
+      "id": "LWW",
+      "owner": "Leo Wolff",
+      "type": "Wallet",
+      "openingBalance": 0,
+      "spaceBefore": true
+    },
+    {
+      "id": "LME",
+      "owner": "Les Mills",
+      "type": "Escrow",
+      "openingBalance": 0,
+      "spaceBefore": true
+    },
+    {
+      "id": "LMW",
+      "owner": "Les Mills",
+      "type": "Wallet",
+      "openingBalance": 0
+    },
+    {
+      "id": "*",
+      "owner": "Givenwell",
+      "type": "Treasury",
+      "openingBalance": 0,
+      "spaceBefore": true
+    }
+  ],
+  "steps": [
+    {
+      "id": "ST",
+      "name": ""
+    },
+    {
+      "id": "CR",
+      "name": "Cash Received"
+    },
+    {
+      "id": "TI",
+      "name": "Supporter Tokens Issued"
+    },
+    {
+      "id": "AA",
+      "name": "Allowances Allocated to Individuals"
+    },
+    {
+      "id": "PT",
+      "name": "Purchased PT Session"
+    },
+    {
+      "id": "RR",
+      "name": "Requests Refund, supplier still paid."
+    },
+    {
+      "id": "SR",
+      "name": "Supplier Receives Payment"
+    },
+    {
+      "id": "GP",
+      "name": "Givenwell Pays Cash"
+    },
+    {
+      "id": "TR",
+      "name": "Tokens issued (and refund allocated)"
+    }
+  ],
+  "rawStepTransactions": [
+    {
+      "stepID": "ST",
+      "tx": ""
+    },
+    {
+      "stepID": "CR",
+      "tx": "SXB/GWT/100"
+    },
+    {
+      "stepID": "TI",
+      "tx": "*/SXW/20"
+    },
+    {
+      "stepID": "AA",
+      "tx": "SXW/LWW/20"
+    },
+    {
+      "stepID": "PT",
+      "tx": "LWW/LME/20"
+    },
+    {
+      "stepID": "CO",
+      "tx": "LME/LWW/10\nLME/LMW/10\n"
+    },
+    {
+      "stepID": "RR",
+      "tx": "LME/LMW/20"
+    },
+    {
+      "stepID": "SR",
+      "tx": "LMW/*/20\n"
+    }
+  ]
+}

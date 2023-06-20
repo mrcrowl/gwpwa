@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "mode": "serde",
+  "title": "Individual cancels before cancellation cut-off",
+  "accounts": [
+    {
+      "id": "SXB",
+      "owner": "SpaceX",
+      "type": "Bank",
+      "openingBalance": 100
+    },
+    {
+      "id": "GWT",
+      "owner": "Givenwell",
+      "type": "Trust",
+      "openingBalance": 0
+    },
+    {
+      "id": "GWB",
+      "owner": "Givenwell",
+      "type": "Bank",
+      "openingBalance": 0
+    },
+    {
+      "id": "LMB",
+      "owner": "Les Mills",
+      "type": "Bank",
+      "openingBalance": 0
+    },
+    {
+      "id": "SXW",
+      "owner": "SpaceX",
+      "type": "Wallet",
+      "openingBalance": 0,
+      "spaceBefore": true
+    },
+    {
+      "id": "LWW",
+      "owner": "Leo Wolff",
+      "type": "Wallet",
+      "openingBalance": 0,
+      "spaceBefore": true
+    },
+    {
+      "id": "LME",
+      "owner": "Les Mills",
+      "type": "Escrow",
+      "openingBalance": 0,
+      "spaceBefore": true
+    },
+    {
+      "id": "LMW",
+      "owner": "Les Mills",
+      "type": "Wallet",
+      "openingBalance": 0
+    },
+    {
+      "id": "*",
+      "owner": "Givenwell",
+      "type": "Treasury",
+      "openingBalance": 0,
+      "spaceBefore": true
+    }
+  ],
+  "steps": [
+    {
+      "id": "ST",
+      "name": ""
+    },
+    {
+      "id": "CR",
+      "name": "Cash Received"
+    },
+    {
+      "id": "TI",
+      "name": "Supporter Tokens Issued"
+    },
+    {
+      "id": "AA",
+      "name": "Allowances Allocated to Individuals"
+    },
+    {
+      "id": "PT",
+      "name": "Purchased PT Session"
+    },
+    {
+      "id": "CO",
+      "name": "Cancels PT Session (before cut-off)"
+    }
+  ],
+  "rawStepTransactions": [
+    {
+      "stepID": "SR",
+      "tx": "LMW/*/20\nGWT/LMB/85\nGWT/GWB/15"
+    },
+    {
+      "stepID": "ST",
+      "tx": ""
+    },
+    {
+      "stepID": "CR",
+      "tx": "SXB/GWT/100"
+    },
+    {
+      "stepID": "TI",
+      "tx": "*/SXW/20"
+    },
+    {
+      "stepID": "AA",
+      "tx": "SXW/LWW/20"
+    },
+    {
+      "stepID": "PT",
+      "tx": "LWW/LME/20"
+    },
+    {
+      "stepID": "CO",
+      "tx": "LME/LWW/20"
+    }
+  ]
+}
