@@ -1,3 +1,7 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+}
 
 html {
   -ms-overflow-style: scrollbar;
@@ -7,18 +11,14 @@ html {
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-#root {
-  width: 100%;
-}
-
 body {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: calc(100% - 4rem);
   box-sizing: border-box;
-  /* border: solid 10px hotpink; */
+  border: solid 10px hotpink;
 }
 
 footer {
